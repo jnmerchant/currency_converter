@@ -13,7 +13,11 @@ def main
 
   currency4 = currency1 * 2
   puts currency4.amount
-  
+
+  currency5 = Currency.new("$1.20")
+  puts currency5.code
+  puts currency5.amount
+
 
 end
 

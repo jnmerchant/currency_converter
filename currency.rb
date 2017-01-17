@@ -1,11 +1,19 @@
 
 
 class Currency
-  def initialize(code, amount)
-    @code = code
-    @amount = amount
+  def initialize(code, amount = nil)
+    defined_currency_symbols = {"£" => "GBR", "$" => "USD", "€" => "EUR"}
+    if amount != nil
+      @code = code
+      @amount = amount
+    else
+      entered_symbol = code[0]
+      @code = defined_currency_symbols[entered_symbol]
+      @amount = code[1..-1]
+    end
   end
 
+  attr_reader :currency_symbol
   attr_reader :code
   attr_accessor :amount
 
