@@ -6,3 +6,6 @@ end
 
 class DifferentCurrencyCodeError < StandardError
 end
+
+class NegativeCurrencyError < StandardError
+end
