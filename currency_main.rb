@@ -1,6 +1,6 @@
-require currency
-require currency_converter
-require currency_converter_error
+require_relative 'currency'
+require_relative 'currency_converter'
+require_relative 'currency_converter_error'
 
 def main
   #test ==
