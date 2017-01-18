@@ -1,5 +1,3 @@
-
-
 class Currency
   def initialize(code, amount = nil)
     defined_currency_symbols = {"£" => "GBR", "$" => "USD", "€" => "EUR"}
