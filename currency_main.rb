@@ -11,6 +11,8 @@ def main
   p currency6.code
   p currency6.amount
 
+  puts CurrencyConverter.new(Currency.new("USD", 1), "USD").convert_currency == Currency.new("USD", 1)
+
 end
 
 if __FILE__ == $PROGRAM_NAME

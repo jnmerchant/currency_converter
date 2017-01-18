@@ -9,3 +9,6 @@ end
 
 class NegativeCurrencyError < StandardError
 end
+
+class UnknownCurrencyCodeError < StandardError
+end

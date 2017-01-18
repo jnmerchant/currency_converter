@@ -13,8 +13,12 @@ class CurrencyConverter
   attr_reader :code
 
   def convert_currency
-    converted_amount = @currency.amount.to_f * @currency_data[@currency.code][@code]
-    Currency.new(@code, converted_amount)
+    if !@currency_data.key?(@currency.code) || !@currency_data.key?(@code)
+      raise UnknownCurrencyCodeError, "One of the currency codes entered is unknown."
+    else
+      converted_amount = @currency.amount.to_f * @currency_data[@currency.code][@code]
+      Currency.new(@code, converted_amount)
+    end
   end
 
 end
