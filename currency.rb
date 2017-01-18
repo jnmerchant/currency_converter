@@ -55,4 +55,8 @@ class Currency
     Currency.new(@code, @amount * value)
   end
 
+  def to_s
+    "Code: #{@code}, Amount: #{@amount}"
+  end
+
 end
